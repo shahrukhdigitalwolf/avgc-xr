@@ -1,0 +1,118 @@
+:root {
+    --background: #faf8f5;
+    --box-background: #b197ce;
+    --box-num: #f8f0ff;
+    --priority-background: rgb(255, 203, 203);
+    --priority-color: rgb(252, 23, 23);
+    --block-background: rgb(212, 238, 255);
+    --block-color: rgb(0, 46, 250);
+    --text-color: rgb(94, 94, 94);
+    --heading-color: #000;
+    --shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+        0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    --pulse-color: #fbbea9;
+}
+
+.box {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 10px;
+    background: var(--box-background);
+    box-shadow: var(--shadow);
+}
+
+.box img {
+    object-fit: fill;
+}
+
+.box .num,
+.box .priority,
+.box .block {
+    position: absolute;
+    margin: 10px;
+    padding: 0 5px;
+    border-radius: 5px;
+    background: var(--box-num);
+}
+
+.box .priority,
+.box .block {
+    bottom: 0;
+    font-size: 16px;
+    color: #f9f9f9;
+}
+
+.box .num {
+    font-size: 21px;
+    color: var(--heading-color);
+}
+
+.box .priority {
+    background: var(--priority-background);
+    color: var(--priority-color);
+}
+
+.box .block {
+    background: var(--block-background);
+    color: var(--block-color);
+}
+
+
+.pulse {
+    box-shadow: 0 0 0 0 var(--pulse-color);
+    -webkit-animation: pulse 2.2s cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation: pulse 2.2s cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: pulse 2.2s cubic-bezier(0.66, 0, 0, 1);
+    animation: pulse 2.2s cubic-bezier(0.66, 0, 0, 1);
+}
+
+@-webkit-keyframes pulse {
+    to {
+        box-shadow: 0 0 0 15px rgba(232, 76, 61, 0);
+    }
+}
+
+@-moz-keyframes pulse {
+    to {
+        box-shadow: 0 0 0 15px rgba(232, 76, 61, 0);
+    }
+}
+
+@-ms-keyframes pulse {
+    to {
+        box-shadow: 0 0 0 15px rgba(232, 76, 61, 0);
+    }
+}
+
+@keyframes pulse {
+    to {
+        box-shadow: 0 0 0 15px rgba(232, 76, 61, 0);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .box {
+        margin: 3px;
+    }
+
+    .box,
+    .box img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .carouselGallery .carousel,
+    .carouselGallery .box img {
+        width: 60px !important;
+        height: 100px;
+    }
+
+    .box .block,
+    .box .priority {
+        margin: 2px;
+        padding: 3px;
+        font-size: 10.5px;
+    }
+}
