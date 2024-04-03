@@ -7,18 +7,30 @@
 body{
   font-family:Arial;
 }
-
+.header{
+  position: sticky;
+  top: 0;
+  background: #f8f9fa;
+  backdrop-filter: blur(7px);
+  z-index: 999;
+}
 @media (max-width: 992px) {
   .navbar-collapse {
-      position: fixed;
-      top: 50px; /* adjust to height of navbar */
-      right: 0;
-      padding-left: 15px;
-      padding-right: 15px;
-      padding-bottom: 15px;
-      padding-top: 15px;
-      width: 75%;
-      height: 100%;
+    position: fixed;
+    top: 90px;
+    right: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    width: 75%;
+    height: 100vh;
+    z-index: 999;
+    background-color: #f8f9fa;
+    box-shadow: 0px 2px 3px;
+  }
+  .nav-item{
+    border-bottom: 1px solid #dddddd;
   }
 
   .navbar-collapse.collapsing {
@@ -29,7 +41,6 @@ body{
   .navbar-collapse.show {
     right: 0;
     transition: right 300ms ease-in-out;
-    background-color: #f8f9fa;
     overflow: scroll;
   }
 
@@ -44,17 +55,89 @@ body{
     margin-top: 0;
  }
 }
-.navbar{
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
 .navbar-nav{
-  gap: 30px;
+  column-gap: 30px;
+  row-gap: 5px;
 }
 .nav-link{
-  color: #9B9B9B;
+  color: #767676;
+}
+.visuallyHidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
 }
 
+.hamburger {
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+
+.hamburger .bar {
+  padding: 0;
+  width: 20px;
+  height: 4px;
+  background-color: rgb(0, 0, 0);
+  display: block;
+  border-radius: 4px;
+  transition: all 0.4s ease-in-out;
+  position: absolute;
+}
+
+.bar1 {
+  top: 3px;
+}
+
+.bar2,
+.bar3 {
+  top: 13.5px;
+}
+
+.bar3 {
+  right: 0;
+}
+
+.bar4 {
+  bottom: 2px;
+}
+
+/* HAMBURGER 1 */
+.checkbox1:checked + label > .hamburger1 > .bar1 {
+  transform: rotate(45deg);
+  transform-origin: 5%;
+  width: 34px;
+}
+
+.checkbox1:checked + label > .hamburger1 > .bar2 {
+  transform: translateX(-40px);
+  background-color: transparent;
+}
+
+.checkbox1:checked + label > .hamburger1 > .bar3 {
+  transform: translateX(40px);
+  background-color: transparent;
+}
+
+.checkbox1:checked + label > .hamburger1 > .bar4 {
+  transform-origin: 5%;
+  transform: rotate(-45deg);
+  width: 33px;
+}
+
+.navbar-light .navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
 
 .hero-heading{
   font-family: "Poppins", sans-serif;
@@ -70,7 +153,7 @@ body{
 .hero-spn::before{
   content: '';
   width: 90%;
-  height: 10px;
+  height: 5px;
   background-color: rgb(255, 196, 0);
   position: absolute;
   bottom: 5px;
@@ -94,6 +177,12 @@ body{
   font-weight: 500;
   line-height: 1.1;
   color: gray;
+}
+
+@media (max-width:991px){
+  .hero-right-img img{
+    width: 60%;
+  }
 }
 
 .about-us{
@@ -173,7 +262,7 @@ body{
 .mis-span::before{
   content: '';
   width: 75%;
-  height: 8px;
+  height: 5px;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -203,6 +292,22 @@ body{
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
+}
+@media (min-width:0) and (max-width:991px){
+  .num-span{
+    position: absolute;
+    top: 23%;
+    transform: translate(-10%, -50%);
+    left: -16px;
+    color: #ffffff;
+    font-size: 45px;
+    font-weight: 700;
+    padding: 6px 20px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
 }
 .num-span.one{
   background-color: #dc1378;
