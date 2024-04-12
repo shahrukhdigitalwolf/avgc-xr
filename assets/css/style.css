@@ -249,7 +249,7 @@ body{
 }
 
 .missionAndVission{
-  padding: 50px 0 50px;
+  padding: 0px 0 50px;
 }
 
 .mission-heading{
@@ -440,7 +440,7 @@ body{
 }
 
 .cal-card{
-  width: 500px;
+  width: 100%;
   background-color: #ffffff;
   padding: 50px 30px;
   border-top-left-radius: 30px;
@@ -696,4 +696,84 @@ footer{
     width: 30px;
     height: 30px;
   }
+}
+
+
+
+.event .owl-nav{
+  position: absolute;
+  top: 50%;
+  transform: translate(0px, -50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.event .owl-nav button.owl-prev, .event .owl-nav button.owl-next{
+  color: #ffffff;
+  background-color: #f5b804;
+  font-size: 23px;
+  width: 25px;
+}
+
+.owl-theme .owl-nav [class*='owl-']:hover{
+  background: #f5b804;
+}
+
+.event .owl-item img{
+  display: block;
+  width: auto;
+  margin: auto;
+}
+
+.bgbs{
+  border: 2px solid #e4e4e4;
+  padding: 10px;
+  background-color: #dddddd;
+}
+.gscfr{
+  font-size: clamp(1.55rem, 0.8434rem + 2.805vw, 2.2875rem);
+  font-weight: 600;
+  line-height: 1;
+}
+
+.service-card{
+  position: relative;
+  overflow: hidden;
+}
+.service-info{
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #fff;
+  width: 100%;
+  height: 80%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #2f62977d;
+  backdrop-filter: blur(5px);
+  transform: translateY(-30%);
+  visibility: hidden;
+  opacity: 0;
+  line-height: 1;
+  transition: opacity .5s, visibility .5s, transform .5s;
+}
+.service-card:hover>.service-info {
+  transform: translateY(0);
+  visibility: visible;
+  opacity: 1;
+} 
+
+.sr-title{
+  font-size: 16px;
+  font-family: "poppins",sans-serif;
+  font-weight: 600;
+}
+
+.tm-mini-title{
+  font-family: "poppins",sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
 }
