@@ -731,7 +731,9 @@ footer{
 .bgbs{
   border: 2px solid #e4e4e4;
   padding: 10px;
-  background-color: #dddddd;
+  background: url(../img/background-avgc.png);
+  background-size: cover;
+  background-position: center center;
 }
 .gscfr{
   font-size: clamp(1.55rem, 0.8434rem + 2.805vw, 2.2875rem);
@@ -784,7 +786,7 @@ footer{
 
 
 .sticky-icon {
-  z-index: 1;
+  z-index: 999;
   position: fixed;
   top: 50%;
   right: 0%;
