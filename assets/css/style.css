@@ -448,6 +448,7 @@ body{
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 30px;
   position: relative;
+  height: 350px;
 }
 .cal-card::before{
   content: '';
@@ -527,17 +528,17 @@ body{
 }
 .meet-heading {
   position: absolute;
-  top: 45.7%;
-  left: -475px;
-  right: 0;
+  top: 47%;
+  left: -660px;
+  right: 0px;
   transform: rotate(-90deg);
-  width: 66.2pc;
+  width: 88.7pc;
   font-size: 60px;
-  margin-bottom: 0;
+  margin-bottom: 0px;
   text-align: center;
   font-weight: 600;
-  background: #f5b804;
-  color: #2f6297;
+  background: rgb(245, 184, 4);
+  color: rgb(47, 98, 151);
 }
 @media (min-width:1200px) and (max-width:1399px){
   .mts-div {
@@ -546,16 +547,16 @@ body{
   }
   .meet-heading {
     position: absolute;
-    top: 45.5%;
-    left: -460px;
-    right: 0;
+    top: 46.5%;
+    left: -609px;
+    right: 0px;
     transform: rotate(-90deg);
-    width: 62.6pc;
+    width: 80.6pc;
     font-size: 60px;
-    margin-bottom: 0;
+    margin-bottom: 0px;
     text-align: center;
     font-weight: 600;
-    background: #f5b804;
+    background: rgb(245, 184, 4);
   }
 }
 @media (min-width:992px) and (max-width:1199px){
@@ -565,11 +566,11 @@ body{
   }
   .meet-heading {
     position: absolute;
-    top: 45%;
-    left: -425px;
+    top: 46.2%;
+    left: -568px;
     right: 0;
     transform: rotate(-90deg);
-    width: 57pc;
+    width: 74.5pc;
     font-size: 60px;
     margin-bottom: 0;
     text-align: center;
@@ -652,7 +653,7 @@ body{
   font-family: "Poppins", sans-serif;
   text-decoration: none;
   font-size: 17px;
-  color:#848484;
+  color:#ffffff;
   font-weight: 500;
 }
 
@@ -746,7 +747,7 @@ footer{
   top: 0;
   color: #fff;
   width: 100%;
-  height: 80%;
+  height: 83%;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -776,4 +777,50 @@ footer{
   font-weight: 500;
   font-size: 14px;
   text-align: center;
+}
+
+
+
+.sticky-icon {
+  z-index: 1;
+  position: fixed;
+  top: 50%;
+  right: 0%;
+  transform: translate(0%, -50%);
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sticky-icon a {
+  transform: translate(160px, 0px);
+  border-radius: 50px 0px 0px 50px;
+  text-align: left;
+  margin: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px;
+  font-size: 15px;
+  font-family: 'Oswald', sans-serif;
+  transition: all 0.8s;
+}
+.sticky-icon a:hover {
+  color: #FFF;
+  transform: translate(0px, 0px);
+}
+.Instagram {
+  background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+  color: #FFF;
+}
+.Facebook {
+  background-color: #2C80D3;
+  color: #FFF;
+}
+.Youtube {
+  background-color: #fa0910;
+  color: #FFF;
+}
+.Twitter {
+  background-color: #0e76a8;
+  color: #FFF;
 }
